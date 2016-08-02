@@ -2,19 +2,23 @@ package cn.lab.neon.common.jms;
 
 import java.io.Serializable;
 
+/**
+ * jms消息
+ * 
+ * @author chenyouliang
+ * 
+ */
 public class Message implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1118236567096207803L;
+	private static final long serialVersionUID = 431832907272899851L;
 
 	private Long objectId; // 根据消息类型,会有不同的含义
 
 	private String objectType;
 
 	private String eventType; // 消息类型
-
-	private String destination;
 
 	private String addition; // 无特定，可以灵活跟随信息
 
@@ -33,7 +37,7 @@ public class Message implements Serializable {
 	}
 
 	/**
-	 * 
+	 * 消息类型和objectId同时相等
 	 */
 	@Override
 	public boolean equals(Object obj) {
@@ -114,13 +118,5 @@ public class Message implements Serializable {
 
 	public void setDistributedContextJson(String distributedContextJson) {
 		this.distributedContextJson = distributedContextJson;
-	}
-
-	public String getDestination() {
-		return destination;
-	}
-
-	public void setDestination(String destination) {
-		this.destination = destination;
 	}
 }
