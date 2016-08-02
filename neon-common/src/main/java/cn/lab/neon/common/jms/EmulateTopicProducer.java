@@ -22,6 +22,12 @@ public class EmulateTopicProducer {
 	public void sendMsg(Message msg) {
 		log.info(msg);
 
+		String[] queueArr = QueueArr.getQueueArr(destination);
+
+		for (String queue : queueArr) {
+			template.convertAndSend(queue, msg);
+		}
+
 	}
 
 	public JmsTemplate getTemplate() {
