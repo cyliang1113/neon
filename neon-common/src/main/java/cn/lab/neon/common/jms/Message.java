@@ -8,12 +8,12 @@ public class Message implements Serializable {
 	 */
 	private static final long serialVersionUID = -1118236567096207803L;
 
-	private Long objectId;
+	private Long objectId; // 根据消息类型,会有不同的含义
 
 	private String objectType;
 
-	private String eventType;
-	
+	private String eventType; // 消息类型
+
 	private String destination;
 
 	private String addition; // 无特定，可以灵活跟随信息
@@ -32,11 +32,14 @@ public class Message implements Serializable {
 		this.eventType = eventType;
 	}
 
+	/**
+	 * 
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Message) {
 			Message cc = (Message) obj;
-			return objectId.equals(cc.getObjectId()) && eventType.equals(cc.getEventType());
+			return eventType.equals(cc.getEventType()) && objectId.equals(cc.getObjectId());
 		} else {
 			return false;
 		}
@@ -44,9 +47,9 @@ public class Message implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Message{" + "objectId=" + objectId + ", objectType='" + objectType + "', eventType='" + eventType
-				+ "', addition='" + addition + "', systemType='" + systemType + "', trackNumber='" + trackNumber
-				+ "', parentAppName='" + parentAppName + "', distributedContextJson='" + distributedContextJson + "'}";
+		return "Message{" + "objectId=" + objectId + ", objectType='" + objectType + "', eventType='" + eventType + "', addition='"
+				+ addition + "', systemType='" + systemType + "', trackNumber='" + trackNumber + "', parentAppName='" + parentAppName
+				+ "', distributedContextJson='" + distributedContextJson + "'}";
 	}
 
 	public Long getObjectId() {
