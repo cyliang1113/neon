@@ -24,6 +24,10 @@ public class EmulateTopicConsumer {
 
 		log.info(m + " -- " + destName);
 
+		if (processerList == null) {
+			return;
+		}
+
 		for (int i = 0; i < processerList.size(); i++) {
 			try {
 				processerList.get(i).process(m);
