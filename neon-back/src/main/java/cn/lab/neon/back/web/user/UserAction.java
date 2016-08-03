@@ -14,6 +14,7 @@ public class UserAction extends BaseAction {
 	@Action("/user/login")
 	public void login(){
 		responseMsg("ok");
+		return;
 	}
 
 }
