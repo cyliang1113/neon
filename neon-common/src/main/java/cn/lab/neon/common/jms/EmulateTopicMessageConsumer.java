@@ -13,8 +13,8 @@ import org.apache.commons.logging.LogFactory;
  * @author chenyouliang
  * 
  */
-public class EmulateTopicConsumer {
-	private static final Log log = LogFactory.getLog(EmulateTopicConsumer.class);
+public class EmulateTopicMessageConsumer {
+	private static final Log log = LogFactory.getLog(EmulateTopicMessageConsumer.class);
 
 	private List<MessageProcesser> processerList;
 

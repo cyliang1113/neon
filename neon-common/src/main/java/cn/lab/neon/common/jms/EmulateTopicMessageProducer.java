@@ -12,8 +12,8 @@ import org.springframework.jms.core.JmsTemplate;
  * @author chenyouliang
  * 
  */
-public class EmulateTopicProducer {
-	private static final Log log = LogFactory.getLog(EmulateTopicProducer.class);
+public class EmulateTopicMessageProducer {
+	private static final Log log = LogFactory.getLog(EmulateTopicMessageProducer.class);
 
 	private JmsTemplate template;
 
