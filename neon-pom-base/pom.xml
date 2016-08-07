@@ -91,8 +91,8 @@
 		<!-- jms -->
 		<dependency>
 			<groupId>javax.jms</groupId>
-			<artifactId>jms</artifactId>
-			<version>1.1</version>
+			<artifactId>javax.jms-api</artifactId>
+			<version>2.0</version>
 		</dependency>
 
 		<!-- activemq -->
@@ -101,9 +101,6 @@
 			<artifactId>activemq-core</artifactId>
 			<version>5.5.1</version>
 		</dependency>
-
-
-
 
 	</dependencies>
 </project>
