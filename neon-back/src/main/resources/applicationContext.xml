@@ -11,6 +11,6 @@
 	http://www.springframework.org/schema/tx 
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-
+	<import resource="applicationContext-neon-back-jms.xml"/>
 
 </beans>

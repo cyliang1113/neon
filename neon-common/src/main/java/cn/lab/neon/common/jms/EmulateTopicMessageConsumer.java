@@ -21,8 +21,8 @@ public class EmulateTopicMessageConsumer {
 	private String destName;
 
 	public void receive(Message m) {
-
-		log.info(m + " -- " + destName);
+		log.info("destName: " + destName);
+		log.info(m);
 
 		if (processerList == null) {
 			return;

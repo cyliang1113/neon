@@ -11,8 +11,8 @@ public class QueueArr {
 	}
 
 	private static void init() {
-		String[] activeMqOrder = new String[] { "ActiveMQ.neon.USER_LOGIN" };
-		queueArrMap.put("ActiveMQ.neon.USER_LOGIN", activeMqOrder);
+		String[] queueArrUserLogin = new String[] { "ActiveMQ.neon.USER_LOGIN" };
+		queueArrMap.put("ActiveMQ.neon.USER_LOGIN", queueArrUserLogin);
 	}
 
 	public static String[] getQueueArr(String key) {
