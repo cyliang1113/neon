@@ -17,7 +17,7 @@ public class EmulateTopicMessageProducer {
 
 	private JmsTemplate template;
 
-	private String destination; // 一组Queue
+	private String destination; // 一组Queue(queue array name)
 
 	public void sendMsg(Message msg) {
 		log.info(msg);
