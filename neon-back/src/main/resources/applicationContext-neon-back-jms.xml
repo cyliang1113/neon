@@ -27,7 +27,7 @@
 	</bean>
 
 	<!-- 消息监听 TOPIC 模式    -->
-	<bean id="orderTopicListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+	<bean id="userLoginListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
 		<property name="connectionFactory" ref="jmsConnectionFactory" />
 		<property name="destination" ref="QUEUE_NAME_NEON_USER_LOGIN" />
 		<property name="messageListener" ref="userLoginListener" />

@@ -32,7 +32,7 @@ public class EmulateTopicMessageConsumer {
 			try {
 				processerList.get(i).process(m);
 			} catch (Exception e) {
-				log.info("Message Info=" + m.toString(), e);
+				log.info(m + "\n", e);
 			}
 		}
 	}
