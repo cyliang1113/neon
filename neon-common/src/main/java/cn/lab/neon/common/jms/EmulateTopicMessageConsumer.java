@@ -21,7 +21,7 @@ public class EmulateTopicMessageConsumer {
 	private String destName;
 
 	public void receive(Message m) {
-		log.info("destName: " + destName);
+		log.info("queue name: " + destName);
 		log.info(m);
 
 		if (processerList == null) {
