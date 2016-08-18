@@ -51,9 +51,9 @@ public class Message implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Message{" + "objectId='" + objectId + "', objectType='" + objectType + "', eventType='" + eventType + "', addition='"
+		return "Message{ " + "objectId='" + objectId + "', objectType='" + objectType + "', eventType='" + eventType + "', addition='"
 				+ addition + "', systemType='" + systemType + "', trackNumber='" + trackNumber + "', parentAppName='" + parentAppName
-				+ "', distributedContextJson='" + distributedContextJson + "'}";
+				+ "', distributedContextJson='" + distributedContextJson + "' }";
 	}
 
 	public Long getObjectId() {

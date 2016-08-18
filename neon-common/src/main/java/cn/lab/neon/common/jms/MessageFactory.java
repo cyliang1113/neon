@@ -13,8 +13,8 @@ public class MessageFactory {
 	 * @param addition
 	 * @return
 	 */
-	public static Message newCertSmsSendMessage(Long orderId, String addition) {
-		Message message = new Message(orderId, "USER_LOGIN", EventType.USER_LOGIN.name());
+	public static Message newUserLogginMessage(Long objectId, String addition) {
+		Message message = new Message(objectId, "USER_LOGIN", EventType.USER_LOGIN.name());
 		message.setAddition(addition);
 		return message;
 	}

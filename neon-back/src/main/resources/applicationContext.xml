@@ -11,6 +11,8 @@
 	http://www.springframework.org/schema/tx 
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
+	<context:component-scan base-package="cn.lab.neon.back"></context:component-scan>
+	
 	<bean id="propertyConfiguration" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
@@ -19,9 +21,9 @@
         </property>
     </bean>
     
-    <import resource="applicationContext-neon-common-jms.xml"/>
+    <import resource="classpath:applicationContext-neon-common-jms.xml"/>
     
 
-	<import resource="applicationContext-neon-back-jms.xml"/>
+	<import resource="classpath:applicationContext-neon-back-jms.xml"/>
 
 </beans>

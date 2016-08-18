@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
+
+	<bean id="QUEUE_NAME_NEON_USER_LOGIN" class="org.apache.activemq.command.ActiveMQQueue">  
+        <constructor-arg>  
+            <value>QUEUE_NAME_NEON_USER_LOGIN</value>  
+        </constructor-arg>  
+    </bean>
+ 						
 	<!-- 真正可以产生Connection的ConnectionFactory -->
 	<bean id="jmsTargetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
 		<property name="brokerURL" value="${jms_server}" />

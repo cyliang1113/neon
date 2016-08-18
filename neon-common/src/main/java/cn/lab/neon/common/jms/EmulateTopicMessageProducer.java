@@ -20,11 +20,13 @@ public class EmulateTopicMessageProducer {
 	private String destination; // 一组Queue(queue array name)
 
 	public void sendMsg(Message msg) {
+		log.info("queue array name: " + destination);
 		log.info(msg);
 
 		String[] queueArr = QueueArr.getQueueArr(destination);
 
 		for (String queue : queueArr) {
+			log.info("queue name: " + queue);
 			template.convertAndSend(queue, msg);
 		}
 

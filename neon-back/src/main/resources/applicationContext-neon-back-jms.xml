@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
-<beans default-autowire="byName">
-
+<beans>
+	
 	<!-- userLogin消息生产者 -->
 	<bean id="userLoginMessageProducer" class="cn.lab.neon.common.jms.EmulateTopicMessageProducer">
 		<property name="destination" value="QUEUE_ARRAY_NAME_NEON_USER_LOGIN"/>
@@ -9,6 +9,7 @@
 	</bean>
 
 	<bean id="userLoginProcesser" class="cn.lab.neon.back.jms.UserLoginProcesser" />
+	
 	<!-- userLogin消息消费者 -->
 	<bean id="userLoginMessageConsumer" class="cn.lab.neon.common.jms.EmulateTopicMessageConsumer">
 		<property name="destName" value="QUEUE_NAME_NEON_USER_LOGIN"/>
