@@ -6,9 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * 模拟Topic
- * 
- * 向一组Queue发送JMS，达到Topic效果
+ * 模拟Topic，向一组Queue发送JMS，达到Topic效果
  * 
  * @author chenyouliang
  * 
