@@ -6,7 +6,7 @@ public class ByteBufferDemo {
 	public static void main(String[] args) {
 		ByteBuffer buffer = ByteBuffer.allocate(10);
 
-		buffer.clear(); // 把position设为0，把limit设为capacity
+		buffer.clear(); // 鎶妏osition璁句负0锛屾妸limit璁句负capacity
 
 		byte a = 1;
 		byte b = 2;
