@@ -4,32 +4,29 @@
 	
 	<!-- userLogin消息生产者 -->
 	<bean id="userLoginMessageProducer" class="cn.lab.neon.common.jms.EmulateTopicMessageProducer">
-		<property name="destination" value="QUEUE_ARRAY_NAME_NEON_USER_LOGIN"/>
+		<property name="destination" value="QueueArray_NeonUserLogin"/>
 		<property name="template" ref="jmsTemplate" />
 	</bean>
 
+	<!-- userLogin消息处理 -->
 	<bean id="userLoginProcesser" class="cn.lab.neon.back.jms.UserLoginProcesser" />
-	
-	<!-- userLogin消息消费者 -->
-	<bean id="userLoginMessageConsumer" class="cn.lab.neon.common.jms.EmulateTopicMessageConsumer">
-		<property name="destName" value="QUEUE_NAME_NEON_USER_LOGIN"/>
+	<bean id="userLoginMessageProcesserContainer" class="cn.lab.neon.common.jms.MessageProcesserContainer">
+		<property name="destName" value="Queue_NeonUserLogin"/>
 		<property name="processerList">
 			<list>
 				<ref bean="userLoginProcesser" />
 			</list>
 		</property>
 	</bean>
-
-	<bean id="userLoginListener"
-		class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
-		<constructor-arg ref="userLoginMessageConsumer" />
+	
+	<!-- 消息监听  -->
+	<bean id="userLoginListener" class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
+		<constructor-arg ref="userLoginMessageProcesserContainer" />
 		<property name="defaultListenerMethod" value="receive" />
 	</bean>
-
-	<!-- 消息监听 TOPIC 模式    -->
 	<bean id="userLoginListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
 		<property name="connectionFactory" ref="jmsConnectionFactory" />
-		<property name="destination" ref="QUEUE_NAME_NEON_USER_LOGIN" />
+		<property name="destination" ref="Queue_NeonUserLogin" />	<!-- 监听的队列 -->
 		<property name="messageListener" ref="userLoginListener" />
 	</bean>
 

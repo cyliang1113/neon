@@ -6,20 +6,19 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * 模拟Topic，向一组Queue发送JMS，达到Topic效果
  * 
  * @author chenyouliang
  * 
  */
-public class EmulateTopicMessageConsumer {
-	private static final Log log = LogFactory.getLog(EmulateTopicMessageConsumer.class);
+public class MessageProcesserContainer {
+	private static final Log log = LogFactory.getLog(MessageProcesserContainer.class);
 
 	private List<MessageProcesser> processerList;
 
 	private String destName;
 
 	public void receive(Message m) {
-		log.info("queue name: " + destName);
+		log.info("queue: " + destName);
 		log.info(m);
 
 		if (processerList == null) {
@@ -30,7 +29,7 @@ public class EmulateTopicMessageConsumer {
 			try {
 				processerList.get(i).process(m);
 			} catch (Exception e) {
-				log.info(m + "\n", e);
+				log.error(m + "\n", e);
 			}
 		}
 	}
