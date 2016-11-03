@@ -15,22 +15,21 @@ public class ByteBufferDemo {
 		buffer.put(a);
 		buffer.put(b);
 		buffer.put(c);
-		
-		System.out.println("capacity: " + buffer.capacity());
-		System.out.println("limit: " + buffer.limit());
-		System.out.println("position: " + buffer.position());
-		
-		buffer.flip();
 
 		System.out.println("capacity: " + buffer.capacity());
 		System.out.println("limit: " + buffer.limit());
 		System.out.println("position: " + buffer.position());
+		System.out.println("=========================");
 		
+		buffer.flip(); // 把limit设为当前position，把position设为0
+
+		System.out.println("capacity: " + buffer.capacity());
+		System.out.println("limit: " + buffer.limit());
+		System.out.println("position: " + buffer.position());
+
 		for (int i = buffer.position(); i < buffer.limit(); i++) {
 			System.out.println(buffer.get(i));
 		}
-		
-		
-		
+
 	}
 }
