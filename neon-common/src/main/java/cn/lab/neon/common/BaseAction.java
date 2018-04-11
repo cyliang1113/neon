@@ -5,7 +5,8 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -17,7 +18,7 @@ public class BaseAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = -6943401049286581349L;
 	
-	protected Logger log = Logger.getLogger(this.getClass());
+	private static final Log log = LogFactory.getLog(BaseAction.class);
 
 	protected HttpServletResponse getResponse() {
 		return ServletActionContext.getResponse();

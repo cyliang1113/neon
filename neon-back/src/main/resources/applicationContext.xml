@@ -21,9 +21,10 @@
         </property>
     </bean>
     
-    <import resource="classpath:applicationContext-neon-common-jms.xml"/>
-    
+	<!--     
+	<import resource="classpath:applicationContext-neon-common-jms.xml"/>
 
 	<import resource="classpath:applicationContext-neon-back-jms.xml"/>
+	-->
 
 </beans>

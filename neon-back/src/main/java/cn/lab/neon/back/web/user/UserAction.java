@@ -17,15 +17,16 @@ public class UserAction extends BaseAction {
 	 */
 	private static final long serialVersionUID = -2314016829014364681L;
 	
-	@Autowired
-	private EmulateTopicMessageProducer userLoginMessageProducer;
+//	@Autowired
+//	private EmulateTopicMessageProducer userLoginMessageProducer;
 	
 	@Action("/user/login")
 	public void login(){
-		Message message = MessageFactory.newUserLogginMessage(1213L, "");
-		userLoginMessageProducer.sendMsg(message);
-		responseMsg("ok");
-		return;
+		throw new NullPointerException();
+//		Message message = MessageFactory.newUserLogginMessage(1213L, "");
+//		userLoginMessageProducer.sendMsg(message);
+		//responseMsg("ok");
+		//return;
 	}
 
 }
