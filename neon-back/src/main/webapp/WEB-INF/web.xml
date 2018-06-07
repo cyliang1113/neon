@@ -5,11 +5,11 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	
 	<filter>
-		<filter-name>accessFilter</filter-name>
-		<filter-class>cn.lab.neon.common.filter.AccessFilter</filter-class>
+		<filter-name>TrackFilter</filter-name>
+		<filter-class>cn.lab.neon.common.soa.filter.TrackFilter</filter-class>
 	</filter>
 	<filter-mapping>
-		<filter-name>accessFilter</filter-name>
+		<filter-name>TrackFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
