@@ -39,8 +39,10 @@ public class TrackFilter implements Filter {
 		}
 
 		try {
-			String trackNumber = UUIDUtil.generateUuid();
-			TrackNumberContext.setTrackNumber(trackNumber);
+			if(TrackNumberContext.getTrackNumber() == null){
+				String trackNumber = UUIDUtil.generateUuid();
+				TrackNumberContext.setTrackNumber(trackNumber);
+			}
 			String logtail = "[trackNumber=" + TrackNumberContext.getTrackNumber() + "]";
 			Log4JLogTailMDC.setTail(logtail);
 			log.info(requestURL + " -------- start");
