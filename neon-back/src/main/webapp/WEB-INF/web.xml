@@ -17,11 +17,11 @@
 
 	<!-- struts核心控制器 -->
 	<filter>
-		<filter-name>struts2Filter</filter-name>
+		<filter-name>Struts2Filter</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
 	</filter>
 	<filter-mapping>
-		<filter-name>struts2Filter</filter-name>
+		<filter-name>Struts2Filter</filter-name>
 		<url-pattern>/*</url-pattern>
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
