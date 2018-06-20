@@ -1,7 +1,6 @@
-package cn.lab.neon.common.soa.filter;
+package cn.lab.neon.common.soa.web.filter;
 
 import java.io.IOException;
-import java.util.UUID;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
