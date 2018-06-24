@@ -1,4 +1,4 @@
-package cn.lab.neon.common.soa.filter;
+package cn.lab.neon.common.soa.web.filter;
 
 import java.io.IOException;
 
@@ -42,8 +42,7 @@ public class TrackFilter implements Filter {
 				String trackNumber = UUIDUtil.generateUuid();
 				TrackNumberContext.setTrackNumber(trackNumber);
 			}
-			String logtail = "[trackNumber=" + TrackNumberContext.getTrackNumber() + "]";
-			Log4JLogTailMDC.setTail(logtail);
+			Log4JLogTailMDC.setTail(TrackNumberContext.getTrackNumber());
 			log.info(requestURL + " -------- start");
 			chain.doFilter(request, response);
 		} finally {
