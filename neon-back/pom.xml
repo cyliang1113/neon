@@ -9,6 +9,14 @@
 	<dependencies>
 		<dependency>
 			<groupId>cn.lab</groupId>
+			<artifactId>neon-pom-base</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>pom</type>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>cn.lab</groupId>
 			<artifactId>neon-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

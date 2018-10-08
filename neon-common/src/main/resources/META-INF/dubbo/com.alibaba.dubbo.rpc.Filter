@@ -1,0 +1,2 @@
+InvokeLogFilter=cn.lab.neon.common.soa.dubbo.filter.InvokeLogFilter
+TrackFilter=cn.lab.neon.common.soa.dubbo.filter.TrackFilter
